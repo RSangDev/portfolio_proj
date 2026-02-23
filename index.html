@@ -1,488 +1,867 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portfólio by Rafael Sanglard</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" type="image/png" href="images/pic13.jpeg">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rafael Sanglard — Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-	</head>
-	<body class="is-preload">
+    :root {
+      --bg:        #f7f6f2;
+      --surface:   #ffffff;
+      --border:    #e2e0da;
+      --border2:   #cccbc6;
+      --text:      #1a1916;
+      --muted:     #6b6960;
+      --faint:     #9b9990;
+      --accent:    #1a4a3a;
+      --accent-l:  #2d7a60;
+      --accent-bg: #eef4f1;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    html { scroll-behavior: smooth; }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Portfólio</strong> by Rafael Sanglard</a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(247,246,242,0.93);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3rem;
+      height: 60px;
+    }
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Olá, bem vindo ao meu portfólio</h1>
-											<p>Aqui colocarei alguns dos meus projetos, a fim de mostrar um pouco do meu conhecimento.<br>
-												Sinta-se à vontade para entrar em contato através dos links disponibilizados no final da página.</p>
-										</header>
-										<p>Pretendo mostrar parte do que sei sobre desenvolvimento web, programação e ciência de dados.</p>
-										<ul class="actions">
-											<li><a href="https://taqe.me/rafael-augusto8664/details" class="button big">Sobre mim</a></li>
-										</ul>
-									</div>
-									<span>
-										<!--<img src="images/pic03.jpg" width="300" height="300" alt="" />-->
-									</span>
-								</section>
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
 
-							<!-- Content -->
-							<section>
-								<header class="main">
-									<h1>Sobre mim</h1>
-								</header>
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 
-								<!-- Content -->
-									<h2 id="content">Meu nome é Rafael Sanglard</h2>
-									<p>	
-										Sou recém formado em Analise e Desenvolvimento de Sistemas, cursando Sistemas de Informação 
-										e estou muito ansioso para aprender e colocar meu conhecimento em prática.
-									</p>
-									<p>
-										Já tive uma experiência profissional como jovem aprendiz auxiliar administrativo, isso aprimorou algumas habilidades como organização, gestão de informações e atendimento ao colaborador.<br>
-										 Além de fornecer uma visão interna sobre o ambiente empresarial
-										 Na faculdade, desenvolvi em Java, C e Python. Meu projeto de TCC foi uma migração de uma aplicação desktop para web, usando Springboot.
-									</p>
-									<p>
-										Acredito que minhas habilidades, vontade de aprender e experiências podem agregar valor.
-									</p>
-							</section>
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Habilidades</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-file"></span>
-											<div class="content">
-												<h3>Linguagens de Programação</h3>
-												<p>Java, C, Pyhon, Javascript </p>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-folder"></span>
-											<!--<span class="icon solid fa-paper-plane"></span>-->
-											<div class="content">
-												<h3>Banco de Dados</h3>
-												<p>MySQL, PostgreSQL, SQLServer</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Visualização de Dados, Estatística e Machine Learning</h3>
-												<p>Power  BI, Plotly, Matplotlib, Streamlit</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-mobile"></span>
-											<div class="content">
-												<h3>Desenvolvimento Mobile</h3>
-												<p> React native, Android Studio, Firebase</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-database"></span>
-											<div class="content">
-												<h3>Engenharia de dados</h3>
-												<p> Docker, Apache Airflow, Spark, Hadoop, Kafka, MinIO</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon regular fa-compass"></span>
-											<div class="content">
-												<h3>Engenharia de Software</h3>
-												<p> Astah, Bitbucket, Git, Github, Trello</p>
-											</div>
-										</article>
-									</div>
-								</section>
+    .nav-links a:hover { color: var(--accent); }
 
-								<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Experiência</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon regular fa-hospital"></span>
-											<div class="content">
-												<h3>Jovem Aprendiz Aux Adm <br>2019 - 2021</h3>
-												<p>Trabalhei como J.A em uma empresa de médio porte, ApoioEcolimp, no setor de Saúde Ocupacional.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon regular fa-handshake"></span>
-											<div class="content">
-												<h3>Atendente de Farmácia <br>2014 - 2015</h3>
-												<p>Trabalhei em uma farmácia pequena, drogaria Lual, por cerca um ano.</p>
-											</div>
-										</article>
-									</div>
-								</section>
+    .hero {
+      padding: 9rem 3rem 6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 5rem;
+      align-items: end;
+      border-bottom: 1px solid var(--border);
+    }
 
-								<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Formação</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon solid fa-keyboard"></span>
-											<!--<span class="icon fa-gem"></span>-->
-											<div class="content">
-												<h3>Analise e Desenvolvimento de Sistemas</h3>
-												<p>FAETERJ 2019 - 2024</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-keyboard"></span>
-											<!--<span class="icon solid fa-paper-plane"></span>-->
-											<div class="content">
-												<h3>Sistemas de Informação</h3>
-												<p>UNESA 2018 - 2024</p>
-											</div>
-										</article>
-								</section>
+    .hero-eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent-l);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+    }
 
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Projetos</h2>
-									</header>
-									<div class="posts">
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
 
-										<article>
-											<a href="#" class="image"><img src="images/pic17.jpg" height="243" width="244.5" alt="" /></a>
-											<h3>covid19 etl pipeline</h3>
-											
-											<p> Pipeline ETL pronto para produção para processamento de dados globais da COVID-19 usando PySpark,
-												com fluxos de trabalho automatizados e visualizações interativas.</p>
-											<br>
-											<h4>Tecnologias empregadas:</h4>
-											<ul>
-												<li>Actions, Pytest, Numpy</li>
-												<li>Pandas, Airflow, SQLite</li>
-												<li>Streamlit</li>
-											</ul>
-											
-											<a href="https://github.com/RSangDev/covid19-etl-pipeline">Link para o Github</a></li>
+    .hero-role {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 500px;
+      line-height: 1.75;
+    }
 
-											<br>
-											<br>
-											<ul class="actions">
-												
-												<li><a href="https://covid19-etl-pipeline.streamlit.app" class="button">Link para o projeto</a></li>
-												
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic16.jpg" height="243" width="244.5" alt="" /></a>
-											<h3>weather analytics dashboard</h3>
-											
-											<p> Uma plataforma de análise meteorológica de nível profissional que processa dados meteorológicos em tempo real para todas as 27 capitais dos estados brasileiros.</p>
-											<br>
-											<h4>Tecnologias empregadas:</h4>
-											<ul>
-												<li>API open-meteo, Airflow</li>
-												<li>Streamlit, Pandas, Plotly e Matplotlib</li>
-												<li>Pytest, Coverage, GitHub Actions</li>
-											</ul>
-											<a href="https://github.com/RSangDev/weather-analytics-dashboard">Link para o Github</a></li>
+    .hero-ctas { display: flex; gap: 0.8rem; flex-wrap: wrap; }
 
-											<br><br>
+    .btn {
+      display: inline-block;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      padding: 0.7rem 1.6rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
 
-											<ul class="actions">
-												<li><a href="https://weather-analytics-dashboard.streamlit.app" class="button">Link para o projeto</a></li>
-											</ul>
-										</article><article>
-											<a href="#" class="image"><img src="images/pic18.jpg" height="243" width="244.5" alt="" /></a>
-											<h3>Análise de Internações Hospitalares</h3>
-											
-											<p> Sistema completo de Data Engineering + Machine Learning para análise de internações hospitalares com dados do DATASUS/SIH (Sistema de Informações Hospitalares).</p>
-											<br>
-											<h4>Tecnologias empregadas:</h4>
-											
-											<ul>
-												<li>API DATASUS, Actions, Flake8 + Black</li>
-												<li>Scikit-learn, Pandas, Plotly, SQLite </li>
-												<li>Jupyter Notebook</li>
-											</ul>
-											<a href="https://github.com/RSangDev/datasus-internacoes">Link para o Github</a></li>
-											<br><br>
-											<ul class="actions">
-												<li><a href="https://datasus-internacoes.streamlit.app" class="button">Link para o projeto</a></li>
-											</ul>
-										</article>
-										
-										<article>
-											<a href="#" class="image"><img src="images/pic16.jpg" height="243" width="244.5" alt="" /></a>
-											<h3>Crypto streaming lakehouse</h3>
-											
-											<p> Um pipeline de dados em tempo real, processamento e visualização de criptomoedas da Binance. Construído com foco em escalabilidade, robustez e arquitetura Medallion.</p>
-											<br>
-											<h4>Tecnologias empregadas:</h4>
-											<ul>
-												<li>Airflow, pyspark, minio</li>
-												<li>Docker, kafka, PostgreSQL</li>
-												<li>APIs Binance, arquitetura medallion</li>
-											</ul>
-											<a href="https://github.com/RSangDev/crypto-streaming-lakehouse">Link para o Github</a></li>
-											<br><br>
-											<ul class="actions">
-												<li><a href="https://view-crypto-streaming.streamlit.app" class="button">Link para o projeto</a></li>
-											</ul>
-										</article>
-										
-										<article>
-										<a href="https://rsangdev.github.io/ivity.com"
-										class="image"
-										style="
-											display:block;
-											width:100%;
-											height:260px;
-											background:#a6a6a6;
-											overflow:hidden;
-											border-radius:8px;
-										">
-										<img
-											src="https://raw.githubusercontent.com/RafaelSanglard/4POA/refs/heads/main/icon_ivity.png"
-											alt=""
-											style="
-											width:100%;
-											height:100%;
-											object-fit:contain;
-											display:block;
-											"
-										/>
-										</a>
-										
-											<h3>Ivity</h3>
-											
-											<p> Meu primeiro APP mobile, nativo, em breve será lançado. A ideia era montar um aplicativo voltado para produtividade, oferecendo metodos e métricas de mensurar sua evolução.</p>
-																						<br>
+    .btn-primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+    .btn-primary:hover { background: var(--accent-l); border-color: var(--accent-l); }
+    .btn-outline { background: transparent; color: var(--muted); border: 1px solid var(--border2); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
-											<br>
-											<h4>Tecnologias empregadas:</h4>
-											<ul>
-												<li>Git, Gitlab e Github</li>
-												<li>Java, RealtimeDatabase, Auth e AdSense</li>
-												<li>Android Studio</li>
+    .hero-aside { padding-bottom: 0.5rem; }
+    .hero-aside-block { border-top: 1px solid var(--border); padding: 1.2rem 0; }
 
-											</ul>
-											<br>
-											<ul class="actions">
-												<li><a href="https://rsangdev.github.io/ivity.com" class="button">Link para o projeto</a></li>
-											</ul>
-										</article>
+    .hero-aside-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--faint);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
 
-										<article>
-											<a href="https://ivitylab.com"
-											class="image"
-											style="
-												display:block;
-												width:100%;
-												height:260px;
-												background:#a6a6a6;
-												overflow:hidden;
-												border-radius:8px;
-											">
-											<img
-												src="images/pic15.jpg"
-												alt=""
-												style="
-												width:100%;
-												height:100%;
-												object-fit:contain;
-												display:block;
-												"
-											/>
-											</a>
+    .hero-aside-value { font-size: 0.88rem; color: var(--muted); }
+
+    .status-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #2d9e6a;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .page { max-width: 1100px; margin: 0 auto; padding: 0 3rem; }
+
+    .section { padding: 5rem 0; border-bottom: 1px solid var(--border); }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      align-items: baseline;
+    }
+
+    .section-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--faint);
+      letter-spacing: 0.1em;
+      padding-top: 0.25rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-body { padding-left: calc(160px + 3rem); }
+
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table tr { border-bottom: 1px solid var(--border); }
+    .skills-table tr:last-child { border-bottom: none; }
+    .skills-table td { padding: 1rem 0; vertical-align: top; }
+
+    .skill-cat {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--faint);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding-right: 2rem;
+      width: 190px;
+      white-space: nowrap;
+    }
+
+    .skill-items { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+    .skill-pill {
+      font-size: 0.8rem;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 0.28rem 0.75rem;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.25s, border-color 0.25s;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 4px 20px rgba(26,74,58,0.08);
+      border-color: var(--border2);
+    }
+
+    .project-thumb {
+      width: 100%;
+      height: 185px;
+      object-fit: cover;
+      display: block;
+      background: #ebe9e3;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-thumb.contain {
+      object-fit: contain;
+      padding: 2rem;
+      background: #f0eeea;
+    }
+
+    .project-body {
+      padding: 1.3rem 1.4rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-type {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.63rem;
+      color: var(--accent-l);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .stack-pill {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.61rem;
+      color: var(--faint);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 0.17rem 0.48rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.6rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      margin-top: auto;
+      flex-wrap: wrap;
+    }
+
+    .proj-btn {
+      flex: 1;
+      min-width: 100px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.77rem;
+      font-weight: 500;
+      padding: 0.58rem 0.75rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .proj-btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+    }
+
+    .proj-btn.primary:hover { background: var(--accent-l); border-color: var(--accent-l); }
+
+    .proj-btn.secondary {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border2);
+    }
+
+    .proj-btn.secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+    .project-card.wide {
+      grid-column: span 2;
+      flex-direction: row;
+    }
+
+    .project-card.wide .project-thumb {
+      width: 240px;
+      height: auto;
+      flex-shrink: 0;
+      border-bottom: none;
+      border-right: 1px solid var(--border);
+    }
+
+    /* TIMELINE */
+    .timeline { display: flex; flex-direction: column; gap: 2.5rem; }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 155px 1fr;
+      gap: 2rem;
+    }
+
+    .tl-period {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--faint);
+      letter-spacing: 0.04em;
+      padding-top: 0.1rem;
+    }
+
+    .tl-role { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
+    .tl-place { font-size: 0.82rem; color: var(--accent-l); font-weight: 500; margin-bottom: 0.45rem; }
+    .tl-desc { font-size: 0.86rem; color: var(--muted); line-height: 1.7; }
+
+    .edu-badge {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      padding: 0.18rem 0.55rem;
+      background: var(--accent-bg);
+      color: var(--accent);
+      border: 1px solid rgba(26,74,58,0.18);
+      border-radius: 2px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-left: 0.6rem;
+      vertical-align: middle;
+    }
+
+    .tl-divider {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--faint);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* CONTACT */
+    .contact-section { padding: 5rem 0 6rem; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .contact-items { display: flex; flex-direction: column; gap: 0.9rem; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--surface);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px rgba(26,74,58,0.07);
+    }
+
+    .contact-icon {
+      width: 36px; height: 36px;
+      background: var(--accent-bg);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .contact-item-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.63rem;
+      color: var(--faint);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.12rem;
+    }
+
+    .contact-item-value { font-size: 0.87rem; font-weight: 500; color: var(--text); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.8rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-copy { font-size: 0.75rem; color: var(--faint); font-family: 'IBM Plex Mono', monospace; }
 
 
 
-											<h3>IvityLab</h3>
-											
-											<p> Um blog complementar ao app,  que promove produtividade, de forma simplificada, com técnicas e métodos. Junte-se a nós na jornada produtiva!.</p>
-											<br><br>
-											<h4>Tecnologias empregadas:</h4>
+    @media (max-width: 860px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 7rem 1.5rem 4rem; }
+      .page { padding: 0 1.5rem; }
+      .section-header { grid-template-columns: 1fr; gap: 0.4rem; }
+      .section-body { padding-left: 0; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-card.wide { grid-column: span 1; flex-direction: column; }
+      .project-card.wide .project-thumb { width: 100%; height: 175px; border-right: none; border-bottom: 1px solid var(--border); }
+      .tl-item { grid-template-columns: 1fr; gap: 0.25rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
 
+<nav>
+  <a class="nav-brand" href="#">Rafael Sanglard</a>
+  <ul class="nav-links">
+    <li><a href="#skills">Habilidades</a></li>
+    <li><a href="#trajetoria">Trajetória</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
 
-											<ul>
-												<li>WordpPress, PHP e MariaDB</li>
-												<li>HTML, CSS, Javascript</li>
-												<li>Yoast SEO, LiteSpeed, Cloudflare e AdSense</li>
+<div class="hero">
+  <div>
+    <p class="hero-eyebrow">Portfólio — Desenvolvedor &amp; Engenheiro de Dados</p>
+    <h1 class="hero-name">Rafael<br>Sanglard</h1>
+    <p class="hero-role">Recém formado em Análise e Desenvolvimento de Sistemas, com pós-graduação em andamento em Engenharia de Dados. Experiência em pipelines de dados, desenvolvimento web e mobile, com foco em soluções robustas e prontas para produção.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/rafael-sanglard-1281ba201/" target="_blank">LinkedIn</a>
+      <a class="btn btn-outline" href="https://github.com/RSangDev" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="hero-aside">
+    <div class="hero-aside-block">
+      <p class="hero-aside-label">Status</p>
+      <p class="hero-aside-value"><span class="status-dot"></span>Disponível para oportunidades</p>
+    </div>
+    <div class="hero-aside-block">
+      <p class="hero-aside-label">Localização</p>
+      <p class="hero-aside-value">Rio de Janeiro, RJ</p>
+    </div>
+    <div class="hero-aside-block">
+      <p class="hero-aside-label">Foco atual</p>
+      <p class="hero-aside-value">Engenharia de Dados · Back-end · Data Analysis</p>
+    </div>
+    <div class="hero-aside-block">
+      <p class="hero-aside-label">Formação</p>
+      <p class="hero-aside-value">ADS · Sistemas de Informação · Pós em Eng. de Dados</p>
+    </div>
+  </div>
+</div>
 
-											</ul>
-											<br>
-											<ul class="actions">
-												<li><a href="https://ivitylab.com" class="button">Link para o projeto</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic14.jpg" height="243" width="244.5" alt="" /></a>
-											<h3>Easy Parking</h3>
-											
-										<p> Aplicativo mobile criado com o objetivo de ajudar usuários a encontrar vagas de estacionamento,além de propor um modelo de intermediação entre clientes e estacionamentos.</p>
-										<h4>Tecnologias empregadas:</h4>
-										<ul>
-											<li>Git, Gitlab e Github</li>
-											<li>Java, RealtimeDatabase, Auth e AdSense</li>
-											<li>React Native, API Google Maps </li>
-										</ul>
-										<br>
-										<ul class="actions">
-											<li><a href="https://github.com/RSangDev/EasyParking" class="button">Link para o projeto</a></li>
-										</ul>
-									</article>
-									
-									<article>
-										<a href="#" class="image"><img src="https://raw.githubusercontent.com/RafaelSanglard/4POA/f65c82312b44f19a13f2bf6555ce195504bd1279/icon-store.jpg" height="243" width="244.5" alt="" /></a>
-										<h3>San Store</h3>
-										<p>Projeto desenvolvido em JS, simulando uma loja virtual web bem simples, focado em estilização, com um CRUD básico no carrinho.
-										</p>
-										<br>
-										<h4>Tecnologias empregadas:</h4>
+<div class="page">
 
-										<ul>
-											<li>HTML,CSS e Javascript</li>
+  <section class="section" id="skills">
+    <div class="section-header">
+      <span class="section-num">01 — Habilidades</span>
+      <h2 class="section-title">Stack técnico</h2>
+    </div>
+    <div class="section-body">
+      <table class="skills-table">
+        <tr>
+          <td class="skill-cat">Linguagens</td>
+          <td><div class="skill-items">
+            <span class="skill-pill">Python</span><span class="skill-pill">Java</span>
+            <span class="skill-pill">JavaScript</span><span class="skill-pill">C</span>
+          </div></td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Banco de Dados</td>
+          <td><div class="skill-items">
+            <span class="skill-pill">PostgreSQL</span><span class="skill-pill">MySQL</span>
+            <span class="skill-pill">SQLServer</span><span class="skill-pill">SQLite</span>
+          </div></td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Eng. de Dados</td>
+          <td><div class="skill-items">
+            <span class="skill-pill">Apache Airflow</span><span class="skill-pill">PySpark</span>
+            <span class="skill-pill">Kafka</span><span class="skill-pill">Docker</span>
+            <span class="skill-pill">Hadoop</span><span class="skill-pill">MinIO</span>
+          </div></td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Dados &amp; ML</td>
+          <td><div class="skill-items">
+            <span class="skill-pill">Pandas</span><span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">Plotly</span><span class="skill-pill">Matplotlib</span>
+            <span class="skill-pill">Power BI</span><span class="skill-pill">Streamlit</span>
+          </div></td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Mobile</td>
+          <td><div class="skill-items">
+            <span class="skill-pill">React Native</span><span class="skill-pill">Android Studio</span>
+            <span class="skill-pill">Firebase</span>
+          </div></td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Ferramentas</td>
+          <td><div class="skill-items">
+            <span class="skill-pill">Git</span><span class="skill-pill">GitHub</span>
+            <span class="skill-pill">GitHub Actions</span><span class="skill-pill">Bitbucket</span>
+            <span class="skill-pill">Pytest</span><span class="skill-pill">Trello</span>
+          </div></td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
-										</ul>
-										<br>
-										<br>
+  <section class="section" id="trajetoria">
+    <div class="section-header">
+      <span class="section-num">02 — Trajetória</span>
+      <h2 class="section-title">Formação &amp; Experiência</h2>
+    </div>
+    <div class="section-body">
 
-										<br>
-										<ul class="actions">
-											<li><a href="https://rafaelsanglard.github.io/San-Store/" class="button">Link para o projeto</a></li>
-											</ul>
-									</article>
-										
-									<article>
-											<a href="#" class="image"><img src="https://raw.githubusercontent.com/RafaelSanglard/4POA/5388adcdf72e4607b6b43617830b0edb2ac26285/icon-cury.jpg" alt="Icon proj" /></a>
-											<h3>Cury Delivery</h3>
-											<p>Projeto desenvolvido em python, utilizando conceitos como manipulação de dados, pensamento estratégico e lógica de computação. Aplicados em uma empresa fictícia de delivery, localizada na India.</p>
-											<h4>Tecnologias empregadas:</h4>
-											<ul>
-												<li>Git, Gitlab e Github</li>
-												<li>Python, Pandas, Plotly e Matplotlib</li>
-												<li>Jupyter Notebook</li>
-											</ul>
-											
-											<ul class="actions">
-												<li><a href="https://rsang-projects-cury-company.streamlit.app/" class="button">Link para o projeto</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="https://raw.githubusercontent.com/RafaelSanglard/4POA/5388adcdf72e4607b6b43617830b0edb2ac26285/icon-salary.jpg" alt="Icon" /></a>
-											<h3>Salary Analysis</h3>
-											<p>Projeto desenvolvido em python, utilizando conceitos como manipulação de dados, pensamento estratégico e lógica. Aplicados em uma base de dados fictícia de uma empresa de tecnologia.</p>
-											<h4>Tecnologias empregadas:</h4>
-											<ul>
-												<li>Git, Gitlab e Github</li>
-												<li>Python, Pandas, Plotly e Matplotlib</li>
-												<li>Jupyter Notebook</li>
-											</ul></p>
-											<ul class="actions">
-												<li><a href="https://rsang-projects.streamlit.app/" class="button">Link para o projeto</a></li>
-											</ul>
-										</article>
-										
-										<article>
-											<a href="#" class="image"><img src="https://raw.githubusercontent.com/RafaelSanglard/4POA/44e38a42e31a137fedb578da7aafae780f9dcafd/icon-bike.jpg" height="243" width="244.5" alt="" /></a>
-											<h3>Bike Proj</h3>
-											<p>O mesmo conceito dos dasboards anteriores, dessa vez usando como base para um dataframe com dados sobre motocicletas usadas. </p>
-																						
-											<h4>Tecnologias empregadas:</h4>
+      <p class="tl-divider">Formação Acadêmica</p>
+      <div class="timeline" style="margin-bottom:3.5rem;">
+        <div class="tl-item">
+          <p class="tl-period">2025 — 2026</p>
+          <div>
+            <p class="tl-role">Pós-Graduação em Engenharia de Dados <span class="edu-badge">Em andamento</span></p>
+            <p class="tl-place">Faculdade Anhanguera</p>
+            <p class="tl-desc">Especialização com foco em pipelines de dados, arquiteturas modernas, cloud e processamento distribuído.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <p class="tl-period">2019 — 2024</p>
+          <div>
+            <p class="tl-role">Análise e Desenvolvimento de Sistemas</p>
+            <p class="tl-place">FAETERJ</p>
+            <p class="tl-desc">TCC: migração de aplicação desktop para web utilizando Spring Boot. Desenvolvimento em Java, C e Python.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <p class="tl-period">2018 — 2024</p>
+          <div>
+            <p class="tl-role">Sistemas de Informação</p>
+            <p class="tl-place">UNESA</p>
+            <p class="tl-desc">Formação em gestão e desenvolvimento de sistemas com visão ampla sobre tecnologia da informação.</p>
+          </div>
+        </div>
+      </div>
 
-											<ul>
-												<li>Git, Gitlab e Github</li>
-												<li>Python, Pandas, Plotly e Matplotlib</li>
-												<li>Jupyter Notebook</li>
+      <p class="tl-divider">Experiência Profissional</p>
+      <div class="timeline">
+        <div class="tl-item">
+          <p class="tl-period">2019 — 2021</p>
+          <div>
+            <p class="tl-role">Jovem Aprendiz — Auxiliar Administrativo</p>
+            <p class="tl-place">ApoioEcolimp · Saúde Ocupacional</p>
+            <p class="tl-desc">Organização e gestão de informações, atendimento ao colaborador e vivência no ambiente corporativo de empresa de médio porte.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <p class="tl-period">2014 — 2015</p>
+          <div>
+            <p class="tl-role">Atendente de Farmácia</p>
+            <p class="tl-place">Drogaria Lual</p>
+            <p class="tl-desc">Atendimento ao cliente e gestão de estoque em farmácia de pequeno porte.</p>
+          </div>
+        </div>
+      </div>
 
-											</ul>
-											<ul class="actions">
-												<li><a href="https://rsang-projects-bike.streamlit.app/" class="button">Link para o projeto</a></li>
-											</ul>
-										</article>
-										
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" height="243" width="244.5" alt="" /></a>
-											<h3>Em desenvolvimento</h3>
-											
-											<p> Ainda não escolhi um projeto para expor aqui.</p>
-											<br>
-											<h4>Tecnologias empregadas:</h4>
-											<br>
-											<br><br>
-											<br>
-											<ul class="actions">
-												<li><a href="#" class="button">Link para o projeto</a></li>
-											</ul>
-										</article>
+    </div>
+  </section>
 
-									</div>
-								</section>
-								<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Entre em contato</h2>
-									</header>
-									<p>Sinta-se à vontade para entrar em contato</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">rafael.1920478300032.faeterj-rio.edu.br</a></li>
-										<li class="icon solid fa-phone">(21) 982#66189</li>
-										<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/rafael-sanglard-1281ba201/">linkedin</a></li>
-									</ul>
-								</section>
+  <section class="section" id="projetos">
+    <div class="section-header">
+      <span class="section-num">03 — Projetos</span>
+      <h2 class="section-title">Trabalhos selecionados</h2>
+    </div>
+    <div class="section-body">
+      <div class="projects-grid">
 
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; RSang. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
+        <div class="project-card">
+          <img class="project-thumb" src="images/pic17.jpg" alt="Covid19 ETL Pipeline"/>
+          <div class="project-body">
+            <p class="project-type">Data Engineering · Pipeline</p>
+            <h3 class="project-title">Covid19 ETL Pipeline</h3>
+            <p class="project-desc">Pipeline ETL pronto para produção para processamento de dados globais da COVID-19 com PySpark, fluxos automatizados via Airflow e visualizações interativas no Streamlit.</p>
+            <div class="project-stack">
+              <span class="stack-pill">PySpark</span><span class="stack-pill">Airflow</span>
+              <span class="stack-pill">Streamlit</span><span class="stack-pill">Pandas</span>
+              <span class="stack-pill">SQLite</span><span class="stack-pill">Pytest</span>
+              <span class="stack-pill">GitHub Actions</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://covid19-etl-pipeline.streamlit.app" target="_blank">Ver projeto ↗</a>
+              <a class="proj-btn secondary" href="https://github.com/RSangDev/covid19-etl-pipeline" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
 
-						</div>
+        <div class="project-card">
+          <img class="project-thumb" src="images/pic16.jpg" alt="Crypto Streaming Lakehouse"/>
+          <div class="project-body">
+            <p class="project-type">Data Engineering · Streaming</p>
+            <h3 class="project-title">Crypto Streaming Lakehouse</h3>
+            <p class="project-desc">Pipeline em tempo real de criptomoedas da Binance com arquitetura Medallion, construído com foco em escalabilidade e robustez.</p>
+            <div class="project-stack">
+              <span class="stack-pill">Kafka</span><span class="stack-pill">PySpark</span>
+              <span class="stack-pill">MinIO</span><span class="stack-pill">Docker</span>
+              <span class="stack-pill">Airflow</span><span class="stack-pill">PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://view-crypto-streaming.streamlit.app" target="_blank">Ver projeto ↗</a>
+              <a class="proj-btn secondary" href="https://github.com/RSangDev/crypto-streaming-lakehouse" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
 
-													
-					</div>
+        <div class="project-card">
+          <img class="project-thumb" src="images/pic19.jpg" alt="Weather Analytics Dashboard"/>
+          <div class="project-body">
+            <p class="project-type">Data Engineering · API Integration</p>
+            <h3 class="project-title">Weather Analytics Dashboard</h3>
+            <p class="project-desc">Plataforma de análise meteorológica que processa dados em tempo real das 27 capitais brasileiras via API open-meteo, com cobertura automatizada de testes.</p>
+            <div class="project-stack">
+              <span class="stack-pill">Airflow</span><span class="stack-pill">Streamlit</span>
+              <span class="stack-pill">Plotly</span><span class="stack-pill">Pandas</span>
+              <span class="stack-pill">Pytest</span><span class="stack-pill">GitHub Actions</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://weather-analytics-dashboard.streamlit.app" target="_blank">Ver projeto ↗</a>
+              <a class="proj-btn secondary" href="https://github.com/RSangDev/weather-analytics-dashboard" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
 
-				
+        <div class="project-card">
+          <img class="project-thumb" src="images/pic18.jpg" alt="Análise de Internações Hospitalares"/>
+          <div class="project-body">
+            <p class="project-type">Data Engineering · Machine Learning</p>
+            <h3 class="project-title">Análise de Internações Hospitalares</h3>
+            <p class="project-desc">Sistema de Data Engineering e ML para análise de internações usando dados do DATASUS/SIH, com modelos preditivos e visualizações interativas.</p>
+            <div class="project-stack">
+              <span class="stack-pill">Scikit-learn</span><span class="stack-pill">Pandas</span>
+              <span class="stack-pill">Plotly</span><span class="stack-pill">SQLite</span>
+              <span class="stack-pill">Jupyter</span><span class="stack-pill">GitHub Actions</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://datasus-internacoes.streamlit.app" target="_blank">Ver projeto ↗</a>
+              <a class="proj-btn secondary" href="https://github.com/RSangDev/datasus-internacoes" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
 
-			</div>
+        <div class="project-card">
+          <img class="project-thumb contain" src="https://raw.githubusercontent.com/RafaelSanglard/4POA/refs/heads/main/icon_ivity.png" alt="Ivity"/>
+          <div class="project-body">
+            <p class="project-type">Mobile · Android — Em breve</p>
+            <h3 class="project-title">Ivity</h3>
+            <p class="project-desc">Aplicativo mobile nativo voltado para produtividade, com métodos e métricas de mensuração de evolução pessoal.</p>
+            <div class="project-stack">
+              <span class="stack-pill">Java</span><span class="stack-pill">Android Studio</span>
+              <span class="stack-pill">Firebase Realtime DB</span><span class="stack-pill">AdSense</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://rsangdev.github.io/ivity.com" target="_blank">Ver projeto ↗</a>
+            </div>
+          </div>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <div class="project-card">
+          <img class="project-thumb contain" src="images/pic15.jpg" alt="IvityLab"/>
+          <div class="project-body">
+            <p class="project-type">Web · Blog</p>
+            <h3 class="project-title">IvityLab</h3>
+            <p class="project-desc">Blog complementar ao app Ivity sobre produtividade, com otimização SEO, CDN Cloudflare e monetização via AdSense.</p>
+            <div class="project-stack">
+              <span class="stack-pill">WordPress</span><span class="stack-pill">PHP</span>
+              <span class="stack-pill">MariaDB</span><span class="stack-pill">Cloudflare</span>
+              <span class="stack-pill">Yoast SEO</span><span class="stack-pill">LiteSpeed</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://ivitylab.com" target="_blank">Ver projeto ↗</a>
+            </div>
+          </div>
+        </div>
 
-	</body>
-</html>
+        <div class="project-card">
+          <img class="project-thumb" src="images/pic14.jpg" alt="Easy Parking"/>
+          <div class="project-body">
+            <p class="project-type">Mobile · React Native</p>
+            <h3 class="project-title">Easy Parking</h3>
+            <p class="project-desc">App para localizar vagas de estacionamento com modelo de intermediação entre clientes e estabelecimentos, integrado ao Google Maps.</p>
+            <div class="project-stack">
+              <span class="stack-pill">React Native</span><span class="stack-pill">Java</span>
+              <span class="stack-pill">Google Maps API</span><span class="stack-pill">Firebase</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://github.com/RSangDev/EasyParking" target="_blank">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img class="project-thumb" src="https://raw.githubusercontent.com/RafaelSanglard/4POA/f65c82312b44f19a13f2bf6555ce195504bd1279/icon-store.jpg" alt="San Store"/>
+          <div class="project-body">
+            <p class="project-type">Web · Frontend</p>
+            <h3 class="project-title">San Store</h3>
+            <p class="project-desc">Loja virtual com foco em estilização e CRUD no carrinho de compras, construída com JavaScript puro.</p>
+            <div class="project-stack">
+              <span class="stack-pill">HTML</span><span class="stack-pill">CSS</span>
+              <span class="stack-pill">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://rafaelsanglard.github.io/San-Store/" target="_blank">Ver projeto ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card wide">
+          <img class="project-thumb" src="https://raw.githubusercontent.com/RafaelSanglard/4POA/5388adcdf72e4607b6b43617830b0edb2ac26285/icon-cury.jpg" alt="Dashboards Analíticos"/>
+          <div class="project-body">
+            <p class="project-type">Data Analysis · Dashboards</p>
+            <h3 class="project-title">Cury Delivery · Salary Analysis · Bike Proj</h3>
+            <p class="project-desc">Série de dashboards analíticos explorando manipulação de dados e visualizações interativas com ML, Pandas e Plotly — aplicados em contextos de delivery, análise salarial e mercado de motos usadas.</p>
+            <div class="project-stack">
+              <span class="stack-pill">Python</span><span class="stack-pill">Pandas</span>
+              <span class="stack-pill">Plotly</span><span class="stack-pill">Matplotlib</span>
+              <span class="stack-pill">Streamlit</span><span class="stack-pill">Jupyter</span>
+            </div>
+            <div class="project-links">
+              <a class="proj-btn primary" href="https://rsang-projects-cury-company.streamlit.app/" target="_blank">Cury Delivery ↗</a>
+              <a class="proj-btn secondary" href="https://rsang-projects.streamlit.app/" target="_blank">Salary Analysis ↗</a>
+              <a class="proj-btn secondary" href="https://rsang-projects-bike.streamlit.app/" target="_blank">Bike Proj ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contato">
+    <div class="section-header">
+      <span class="section-num">04 — Contato</span>
+      <h2 class="section-title">Entre em contato</h2>
+    </div>
+    <div class="section-body">
+      <div class="contact-grid">
+        <div>
+          <p class="contact-desc">Estou disponível para novas oportunidades profissionais, projetos e colaborações. Fique à vontade para entrar em contato pelo canal de sua preferência.</p>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/rafael-sanglard-1281ba201/" target="_blank">Conectar no LinkedIn</a>
+        </div>
+        <div class="contact-items">
+          <a class="contact-item" href="https://www.linkedin.com/in/rafael-sanglard-1281ba201/" target="_blank">
+            <div class="contact-icon">💼</div>
+            <div>
+              <span class="contact-item-label">LinkedIn</span>
+              <span class="contact-item-value">rafael-sanglard-1281ba201</span>
+            </div>
+          </a>
+          <a class="contact-item" href="https://github.com/RSangDev" target="_blank">
+            <div class="contact-icon">🐙</div>
+            <div>
+              <span class="contact-item-label">GitHub</span>
+              <span class="contact-item-value">RSangDev</span>
+            </div>
+          </a>
+          <a class="contact-item" href="/cdn-cgi/l/email-protection#8af8ebecebefe6a4bbb3b8babebdb2b9bababab9b8caecebeffeeff8e0a7f8e3e5a4efeeffa4e8f8">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <span class="contact-item-label">E-mail</span>
+              <span class="contact-item-value"><span class="__cf_email__" data-cfemail="c9bba8afa8aca5e7f8f0fbf9fdfef1faf9f9f9fafb89afa8acbdacbba3e4bba0a6e7acadbce7abbb">[email&#160;protected]</span></span>
+            </div>
+          </a>
+          <a class="contact-item" href="tel:+5521982666189">
+            <div class="contact-icon">📞</div>
+            <div>
+              <span class="contact-item-label">Telefone</span>
+              <span class="contact-item-value">(21) 98266-6189</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span class="footer-copy">© 2025 Rafael Sanglard</span>
+  <span class="footer-copy">Rio de Janeiro, RJ</span>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
